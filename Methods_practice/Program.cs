@@ -66,6 +66,7 @@ namespace Methods_practice
         {
             double monthlyWages = hourlyWage * hoursWorked;
             Console.WriteLine("Your monthly wage is ${0}", monthlyWages);
+        }
         public static void HiWriter()
         {
             Console.WriteLine("HI!!!");
@@ -74,10 +75,11 @@ namespace Methods_practice
         //Trying to make an array of random nums
         //public static int[] RandomArray(int arraySize)
         //{
+        //    Random rnd = new Random()
         //    int[] randNums = new int[arraySize];
-        //    foreach(int num in randNums)
+        //    foreach (int num in randNums)
         //    {
-        //        randNums[num] = Random.Next();
+        //        randNums[num] = rnd.Next();
         //    }
         //    return randNums[];
         //}
