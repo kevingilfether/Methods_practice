@@ -19,7 +19,7 @@ namespace Methods_practice
 
             FavoriteFood(name, food);
 
-            RetirementCalculator(26);
+            RetirementCalculator(900);
             
             double[] wages = new double[2];
             wages[0] = WageCalculator(160, 20);
@@ -36,25 +36,23 @@ namespace Methods_practice
         //Methods get written out here, outside of main, 
         //but on the same level (and typically after)
         //Methods only return one value
-
         public static int Add(int firstNumber, int secondNumber)
         {
             int sum = firstNumber + secondNumber;
 
             return sum;
         }
-
         public static void FavoriteFood(string name, string favoriteFood)
         {
             Console.WriteLine(name + "'s favorite food is " + favoriteFood);
         }
-
         public static void RetirementCalculator(int userAge)
         {
-            int yearsToGo = 65 - userAge;
+            //using math method to find one line solution,
+            // finding greater of two ints
+            int yearsToGo = Math.Max(0, 65 - userAge);
             Console.WriteLine("The user will retire in {0} years", yearsToGo);
         }
-
         public static double WageCalculator(double hoursWorked, double hourlyWage)
         {
             double monthlyWage = hoursWorked * hourlyWage;
