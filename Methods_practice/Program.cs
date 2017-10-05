@@ -12,9 +12,17 @@ namespace Methods_practice
         {
             //I can use a method in here.
 
+            Console.WriteLine("Please enter a name");
+            string name = Console.ReadLine();
+            Console.WriteLine("Please enter the best food ever!");
+            string food = Console.ReadLine();
+
+            FavoriteFood(name, food);
+
             RetirementCalculator(26);
+            
             double[] wages = new double[2];
-            wages[0] = WageCalculator(160, 25);
+            wages[0] = WageCalculator(160, 20);
             wages[1] = WageCalculator(160, 40);
 
             foreach (double wage in wages)
