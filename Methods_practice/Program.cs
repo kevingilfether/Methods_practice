@@ -30,9 +30,13 @@ namespace Methods_practice
             //    Console.WriteLine(wage);
             //}
 
-            WageCalculatorPrint(160, 40);
+            //WageCalculatorPrint(160, 40);
 
-            HiWriter();
+            //HiWriter();
+
+            int[] numbers = GenerateNumbers(10);
+            Reverse(numbers);
+            PrintNumbers(numbers);
 
         }
         //Methods are reuasable bits of code 
@@ -71,19 +75,34 @@ namespace Methods_practice
         {
             Console.WriteLine("HI!!!");
         }
-
-        //Trying to make an array of random nums
-        //public static int[] RandomArray(int arraySize)
-        //{
-        //    Random rnd = new Random()
-        //    int[] randNums = new int[arraySize];
-        //    foreach (int num in randNums)
-        //    {
-        //        randNums[num] = rnd.Next();
-        //    }
-        //    return randNums[];
-        //}
-
+        //Tried coding these on paper first
+        public static int[] GenerateNumbers(int sizeOfArray)
+        {
+            int[] numbers = new int[6];
+            for (int i = 0; i<numbers.Length; i++)
+            {
+                numbers[i] = i + 1;
+            }
+            return numbers;
+        }
+        public static int[] Reverse(int[] numbers)
+        {
+            int temp;
+            for (int i = 0; i<numbers.Length/2;i++)
+            {
+                temp = numbers[i];
+                numbers[i] = numbers[numbers.Length - i - 1];
+                numbers[numbers.Length - i - 1] = temp;
+            }
+            return numbers;
+        }
+        public static void PrintNumbers(int[] numbers)
+        {
+            foreach(int number in numbers)
+            {
+                Console.WriteLine(number);
+            }
+        }
 
     }
 }
