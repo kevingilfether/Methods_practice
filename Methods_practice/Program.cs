@@ -78,7 +78,7 @@ namespace Methods_practice
         //Tried coding these on paper first
         public static int[] GenerateNumbers(int sizeOfArray)
         {
-            int[] numbers = new int[6];
+            int[] numbers = new int[sizeOfArray];
             for (int i = 0; i<numbers.Length; i++)
             {
                 numbers[i] = i + 1;
