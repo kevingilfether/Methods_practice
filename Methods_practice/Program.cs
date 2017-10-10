@@ -38,6 +38,11 @@ namespace Methods_practice
             Reverse(numbers);
             PrintNumbers(numbers);
 
+            Console.WriteLine();
+            Console.WriteLine(Factorial(4));
+
+            Console.WriteLine(Fibonacci(3));
+
         }
         //Methods are reuasable bits of code 
         //Methods do one thing and do them really well
@@ -102,6 +107,19 @@ namespace Methods_practice
             {
                 Console.WriteLine(number);
             }
+        }
+        public static int Factorial(int number)
+        {
+            if (number == 1)
+                return 1;
+            return number * Factorial(number - 1);
+        }
+        public static int Fibonacci(int number)
+        {
+            if (number == 1 || number == 2)
+                return 1;
+            else
+                return Fibonacci(number - 1) + Fibonacci(number - 2);
         }
 
     }
